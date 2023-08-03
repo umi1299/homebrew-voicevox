@@ -1,0 +1,7 @@
+name: bump-cask
+
+on:
+  workflow_dispatch
+
+jobs:
+  foobar:
