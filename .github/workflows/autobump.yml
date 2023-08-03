@@ -1,7 +1,9 @@
 name: Bump the cask on schedule
 
 on:
-  workflow_dispatch
+  schedule:
+    # Every day at 5am
+    - cron: "0 5 * * *"
 
 jobs:
   bump-casks:
