@@ -13,6 +13,8 @@ cask "voicevox" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "voicevox-preview"
+
   app "VOICEVOX.app"
 
   zap trash: [
