@@ -8,6 +8,13 @@ cask "voicevox-preview" do
   desc "Free, medium-quality text-to-speech software"
   homepage "https://voicevox.hiroshiba.jp/"
 
+  livecheck do
+    url :url
+    regex(/(\d+(?:\.\d+)*-preview\.\d+)$/i)
+  end
+
+  conflicts_with cask: "voicevox"
+
   app "VOICEVOX.app"
 
   zap trash: [
