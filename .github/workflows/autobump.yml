@@ -1,0 +1,7 @@
+name: Bump the cask on schedule
+
+on:
+  workflow_dispatch
+
+jobs:
+  tsumuhima:
