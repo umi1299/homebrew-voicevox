@@ -1,8 +1,8 @@
 cask "voicevox-preview" do
   version "0.15.0-preview.3"
-  sha256 "5584c1c3ce8b32a58ccd7c8744aaeb00de484d36fe5e49a2b6721e033232ba64"
+  sha256 "6da0518dfb3aa00e588fa839ebccff0339b627824ccd038304e8dbfcd751dbf1"
 
-  url "https://github.com/VOICEVOX/voicevox/releases/download/#{version}/voicevox-macos-cpu-#{version}.zip",
+  url "https://github.com/VOICEVOX/voicevox/releases/download/#{version}/VOICEVOX.dmg",
       verified: "github.com/VOICEVOX/voicevox/"
   name "VOICEVOX"
   desc "Free, medium-quality text-to-speech software"
