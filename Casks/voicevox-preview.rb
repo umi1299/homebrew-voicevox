@@ -1,8 +1,8 @@
-cask "voicevox" do
-  version "0.14.7"
-  sha256 "341df00cced9f8b516dda4e79902d4106a34f89dc18264cb1bb6a5721282d75c"
+cask "voicevox-preview" do
+  version "0.15.0-preview.3"
+  sha256 "6da0518dfb3aa00e588fa839ebccff0339b627824ccd038304e8dbfcd751dbf1"
 
-  url "https://github.com/VOICEVOX/voicevox/releases/download/#{version}/VOICEVOX.#{version}.dmg",
+  url "https://github.com/VOICEVOX/voicevox/releases/download/#{version}/VOICEVOX.dmg",
       verified: "github.com/VOICEVOX/voicevox/"
   name "VOICEVOX"
   desc "Free, medium-quality text-to-speech software"
@@ -10,10 +10,10 @@ cask "voicevox" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/(\d+(?:\.\d+)*-preview\.\d+)$/i)
   end
 
-  conflicts_with cask: "voicevox-preview"
+  conflicts_with cask: "voicevox"
 
   app "VOICEVOX.app"
 
