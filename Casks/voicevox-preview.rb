@@ -9,7 +9,7 @@ cask "voicevox-preview" do
   homepage "https://voicevox.hiroshiba.jp/"
 
   livecheck do
-    url :url
+    url "https://github.com/VOICEVOX/voicevox/releases?q=prerelease%3Atrue&expanded=true"
     regex(/(\d+(?:\.\d+)*-preview\.\d+)$/i)
   end
 
