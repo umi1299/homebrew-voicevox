@@ -4,4 +4,14 @@ on:
   workflow_dispatch
 
 jobs:
-  tsumuhima:
+  bump-casks:
+    runs-on: macos-latest
+    steps:
+      - uses: macauley/action-homebrew-bump-cask@v1
+        with:
+          # Required, custom GitHub access token with only the 'public_repo' scope enabled
+          token: ${{ secrets.BUMP_CASK_TOKEN }}
+          tap: umi1299/voicevox
+          cask: voicevox
+          livecheck: true
+          dryrun: false
