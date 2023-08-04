@@ -2,7 +2,7 @@ name: Bump the cask on schedule
 
 on:
   schedule:
-    # Every day at 5am
+    # Every day at 5 am (UTC)
     - cron: "0 5 * * *"
 
 jobs:
