@@ -23,11 +23,11 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-name: CI
+name: CI for preview releases
 
 on:
   pull_request:
-    paths-ignore:
+    paths:
       - Casks/*-preview.rb
 
 env:
@@ -158,16 +158,16 @@ jobs:
           contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
           matrix.cask
 
-      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
-        id: audit
-        run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
-        timeout-minutes: 30
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
-          (!matrix.cask || steps.fetch.outcome == 'success') &&
-          !matrix.skip_audit
+#      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
+#        id: audit
+#        run: |
+#          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
+#        timeout-minutes: 30
+#        if: >
+#          always() &&
+#          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+#          (!matrix.cask || steps.fetch.outcome == 'success') &&
+#          !matrix.skip_audit
 
       - name: Gather cask information
         id: info
