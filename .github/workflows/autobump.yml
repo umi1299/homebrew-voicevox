@@ -1,4 +1,4 @@
-name: Bump the cask on schedule
+name: Bump casks on schedule
 
 on:
   schedule:
