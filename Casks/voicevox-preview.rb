@@ -21,6 +21,7 @@ cask "voicevox-preview" do
     "~/Library/Application Support/voicevox",
     "~/Library/Application Support/voicevox-cpu",
     "~/Library/Application Support/voicevox-engine",
+    "~/Library/Logs/voicevox",
     "~/Library/Logs/voicevox-cpu",
     "~/Library/Preferences/jp.hiroshiba.voicevox.plist",
     "~/Library/Saved Application State/jp.hiroshiba.voicevox.savedState",
