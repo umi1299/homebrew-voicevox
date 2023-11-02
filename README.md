@@ -1,8 +1,3 @@
 # homebrew-voicevox
 
-## How to install VOICEVOX
-
-```sh
-$ brew tap umi1299/voicevox
-$ brew install --cask --no-quarantine voicevox
-```
+[VOICEVOX/homebrew-voicevox](https://github.com/VOICEVOX/homebrew-voicevox) に移行されました。
